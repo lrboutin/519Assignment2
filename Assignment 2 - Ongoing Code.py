@@ -60,24 +60,3 @@ plt.xlabel('Time (s)')
 plt.ylabel('Square Wave Output')
 plt.legend(loc='best')
 plt.show()
-
-                        #~#
-
-# Alternate Technique: Transfer Function method
-# Note the transfer function method automatically evaluates the 1st order ODE up to 7*tau
-# num = [Kp]
-# den = [taup,1]
-# sys1 = (num,den)
-# t1,y1 = signal.step(sys1) #step can be changed to impulse, or freqresp
-
-# #Something extra; for making Bode plots
-# w, mag, phase = signal.bode(sys1)
-# plt.figure()
-# plt.semilogx(w, mag) # Bode magnitude plot
-# plt.xlabel('Frequency ratio')
-# plt.ylabel('Amplitude ratio (dB)')
-# plt.figure()
-# plt.semilogx(w, phase) # Bode phase plot
-# plt.xlabel('Frequency ratio')
-# plt.ylabel('Phase Shift (degrees)')
-# plt.show()
